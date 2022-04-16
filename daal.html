@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* helper class */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            background-color: rgb(76, 76, 134);
+            height: 300px;
+            width: 500px;
+            position: relative;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px ;
+            flex-direction: column;
+        }
+        .items{
+            width: 400px;
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            font-size: 80px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .items{
+            display: flex;
+        }
+        input{
+            height: 100px;
+            width: 100px;
+            font-size: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            text-align: center;
+        }
+        button{
+            height: 80px;
+            width: 200px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items">
+            <input type="text" placeholder="" id="item1" value="Math.random()*10+1">
+            <b>+</b>
+            <input type="text" placeholder="" id="item2" value="Math.random()*10+1">
+            <b>=</b>
+            <input type="text" placeholder="" id="item3">
+        </div>
+        <button onclick="check()">Шалгах</button>
+    </div>
+</body>
+<script>
+    item1.value=Math.floor(Math.random()*10+1)
+    item2.value=Math.floor(Math.random()*10+1)
+    check=function(){
+        alert(
+            "Your answer:"+
+            item3.value+
+            "\nCorect answer:"+
+            (Number(item1.value)+Number(item2.value))
+        )
+        item3.value=""
+        item1.value=Math.floor(Math.random()*10+1)
+        item2.value=Math.floor(Math.random()*10+1)
+    }
+</script>
+</html>
+<!-- console.log alert prompt, basic input output
+variable utga hadaglah nertei sav 
+camelcase -->
